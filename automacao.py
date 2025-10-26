@@ -13,9 +13,7 @@ from selenium.webdriver.support.ui import Select
 # ================= Configurações =================
 
 # Caminho da pasta onde os PDFs serão salvos (mudar caminha unico)
-PASTA_DESTINO = (
-    r"C:\Users\ricar\OneDrive\Área de Trabalho\automação_NFS\pasta_nfe_barueri\NOTAS"
-)
+PASTA_DESTINO = r"path\pasta_nfe_barueri\NOTAS"
 
 # Configurações do Chrome (download automático)
 opcoes = webdriver.ChromeOptions()
@@ -78,7 +76,7 @@ try:
     )
     campo_senha.click()
     y = input("Digite o login : ")
-    campo_senha.send_keys(x)  # substitua pela sua senha
+    campo_senha.send_keys(y)
     print("✅ Valor senha digitada com sucesso")
 except Exception as e:
     print("❌ Erro ao interagir com o campo de senha:", e)
